@@ -6,6 +6,7 @@ import styles from './CountryPicker.module.css';
 import { fetchCountries } from '../../api';
 
 import axios from 'axios';
+require('dotenv');
 
 const CountryPicker = ({ handleCountryChange }) => {
     const [fetchedCountries, setFetchedCountries] = useState([]);
@@ -14,14 +15,14 @@ const CountryPicker = ({ handleCountryChange }) => {
         const fetchApis = async () => {
             // console.log(ipLookup, 'IP LOOKUP');
             setFetchedCountries(await fetchCountries());
-            const { data } = await axios.get('http://ip-api.com/json');
-            console.log(data.country, 'DATA COUNTRY!!');
-            setDefaultCountry(data.country);
+            if (process.env.NODE_ENV === 'production') {
+                const { data } = await axios.get('http://ipwhois.app/json/');
+                setDefaultCountry(data.country);
+            }
         };
 
         fetchApis();
     }, [setFetchedCountries, handleCountryChange]);
-    console.log(fetchedCountries);
     return (
         <FormControl className={styles.formControl}>
             <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
