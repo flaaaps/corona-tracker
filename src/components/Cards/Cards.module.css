@@ -1,19 +1,29 @@
 .container {
-    margin: 50px 0;
+    margin: 100px 0;
+    width: 85%;
+    box-sizing: border-box;
+}
+
+.gridContainer {
+    display: flex;
 }
 
 .card {
-    margin: 0 2% !important;
+    margin: 1% 2% !important;
 }
 
 .infected {
-    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+    border-bottom: 10px solid #9b59b6;
 }
 .recovered {
     border-bottom: 10px solid rgba(0, 255, 0, 0.5);
 }
 .deaths {
     border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+}
+
+.active {
+    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
 }
 
 @media (max-width: 770px) {

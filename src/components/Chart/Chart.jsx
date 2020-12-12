@@ -12,8 +12,8 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
                 datasets: [
                     {
                         label: 'People',
-                        backgroundColor: ['rgba(0, 0, 255, 0.5', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
-                        hoverBackgroundColor: ['rgba(0, 0, 255, 0.4', 'rgba(0, 255, 0, 0.4)', 'rgba(255, 0, 0, 0.4)'],
+                        backgroundColor: ['#9b59b6', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+                        hoverBackgroundColor: ['#9c59b6e7', 'rgba(0, 255, 0, 0.4)', 'rgba(255, 0, 0, 0.4)'],
                         data: [confirmed.value, recovered.value, deaths.value],
                     },
                 ],
