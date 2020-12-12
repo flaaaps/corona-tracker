@@ -1,11 +1,40 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(250, 250, 250);
 }
+
+.loadingOverlay {
+    width: 200px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    align-self: flex-start;
+    background-color: #34495e;
+    position: fixed;
+    align-items: center;
+    margin: 20px;
+    padding-left: 20px;
+    color: rgb(250, 250, 250);
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 600;
+    justify-content: flex-start;
+
+    opacity: 1;
+    display: none;
+}
+
+.loadingOverlay svg {
+    margin-right: 10px;
+}
+
+/* .loading {
+    display: flex;
+} */
 
 .container {
     display: flex;
