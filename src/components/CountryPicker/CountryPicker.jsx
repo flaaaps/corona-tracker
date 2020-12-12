@@ -16,7 +16,7 @@ const CountryPicker = ({ handleCountryChange }) => {
             // console.log(ipLookup, 'IP LOOKUP');
             setFetchedCountries(await fetchCountries());
             if (process.env.NODE_ENV === 'production') {
-                const { data } = await axios.get('http://ipwhois.app/json/');
+                const { data } = await axios.get('https://ipwhois.app/json/');
                 setDefaultCountry(data.country);
             }
         };
